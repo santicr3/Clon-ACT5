@@ -16,7 +16,12 @@ Para hacer estos ejercicios es necesario haber hecho antes los ejercicios de cre
 6. Volver a mostrar el historial de cambios del repositorio.
 
 ~~~
-solución
+git log
+mkdir capitulos
+nano capitulos/capitulo1.txt
+git add .
+git commit -m "Añadido capítulo 1."
+git log
 ~~~
 
 ## Ejercicio 2
@@ -30,7 +35,10 @@ solución
 3. Mostrar las diferencias entre la última versión y dos versiones anteriores.
 
 ~~~
-solución
+nano capitulos/capitulo2.txt
+git add .
+git commit -m "Añadido capítulo 2."
+git diff HEAD~2
 ~~~
 
 ## Ejercicio 3
@@ -44,7 +52,11 @@ solución
 4. Mostrar las diferencias entre la primera y la última versión del repositorio.
 
 ~~~
-solución
+nano capitulos/capitulo3.txt
+git add .
+git commit -m
+Añadido capítulo 3.
+git diff 50e12f56b17d3b87150cb55245b0f83073d958e7 HEAD
 ~~~
 
 ## Ejercicio 4
@@ -58,5 +70,8 @@ solución
 4. Mostrar quién ha hecho cambios sobre el fichero indice.txt.
 
 ~~~
-solución
+nano index.txt
+git add .
+git commit -m "Añadido capítulo 5 al índice"
+git annotate indice.txt
 ~~~

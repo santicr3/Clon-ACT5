@@ -6,12 +6,36 @@
 2. Configurar Git definiendo el nombre del usuario, el correo electrónico y activar el coloreado de la salida. Mostrar la configuración final.
 
 ~~~
-solución
+mkdir libro
+cd libro
+ls -la
+git init
+ls -la
 ~~~
+
+Nombre de usuario:
+~~~~
+git config --global user.name "Nombre"
+~~~~
+Correo electronico del usuario:
+~~~~
+git config --global user.email "email"
+~~~~
+Activar coloreado:
+~~~~
+git config --global color.ui auto
+~~~~
+Mostrar configuración
+~~~~
+git config --list
+~~~~
 
 ## Ejercicio 2
 
 1. Comprobar el estado del repositorio.
+~~~~
+git status
+~~~~
 2. Crear un fichero indice.txt con el siguiente contenido:
    
     ![ejercicio1.2](imagenes/ejercicio12.png)
@@ -20,16 +44,18 @@ solución
 2. Añadir el fichero a la zona de intercambio temporal.
 3. Volver a comprobar una vez más el estado del repositorio.
 
-~~~
-solución
-~~~
+~~~~
+nano indice.txt
+git status
+git add
+~~~~
 
 ## Ejercicio 3
 
 Realizar un commit de los últimos cambios con el mensaje “Añadido índice del libro.” y ver el estado del repositorio.
 
 ~~~
-solución
+git commit -m "Añadido índice del libro."
 ~~~
 
 ## Ejercicio 4
@@ -43,7 +69,10 @@ solución
 3. Hacer un commit de los cambios con el mensaje “Añadido capítulo 3 sobre gestión de ramas”.
 
 ~~~
-solución
+nano indice.txt
+git diff
+git add .
+git commit -m "Añadido capítulo 3 sobre gestión de ramas”
 ~~~
 
 ## Ejercicio 5
@@ -53,7 +82,9 @@ solución
 3. Volver a mostrar los últimos cambios del repositorio.
 
 ~~~
-solución
+git diff
+git commit --amend -m "Añadido capítulo 3 sobre gestión de ramas al índice."
+git show
 ~~~
 
 
@@ -62,7 +93,6 @@ solución
 Indica a Git que quieres que ignore todos los ficheros que empiecen per “dam”, todos los que 
 tengan la extensión out y las imágenes (jpg, png, bmp y gif). 
 
-~~~
-solución
-~~~
+No lo he encontrado
+
 

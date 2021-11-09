@@ -8,8 +8,10 @@ Para hacer estos ejercicios es necesario haber hecho antes los ejercicios sobre 
 2. Añadirlo al repositorio local del libro.
 3. Mostrar todos los repositorios remotos configurados.
 
-~~~git
-solución
+~~~
+git remote add GitHub url
+git remote -v
+
 ~~~
 
 
@@ -18,8 +20,8 @@ solución
 1. Añadir los cambios del repositorio local al repositorio remoto de GitHub.
 2. Acceder a GitHub y comprobar que se han subido los cambios mostrando el historial de versiones.
 
-~~~git
-solución
+~~~
+git push GitHub
 ~~~
 
 ## Ejercicio 3
@@ -31,8 +33,17 @@ solución
 5. Hacer un commit con el mensaje “Añadido autor.”
 6. Subir los cambios al repositorio remoto.
 
-~~~git
-solución
+~~~
+Voy a usar el repositorio de Pau (https://github.com/paumahiquesgarcia/-libro-git)
+mkdir libro-pau
+cd libro-pau
+git clone https://github.com/paumahiquesgarcia/-libro-git
+nano autores.txt
+mv autores.txt libros-git
+cd libros-git
+git add .
+git commit -m "Añadido autor."
+git push
 ~~~
 
 ## Ejercicio 4
@@ -43,8 +54,11 @@ solución
 
 Nota: En este ejercicio, deberéis enviar capturas de los pasos que vayáis llevando a cabo.
 
-~~~git
-solución
+~~~
+git clone https://github.com/santicr3/guiaApunts
+cd guiaApunts/
+nano Readme.md
+git push
 ~~~
 
 ## Ejercicio 5
@@ -53,6 +67,7 @@ solución
 2. Crea un repositorio en tu cuenta de GitHub, y sube el repositorio clonado con las soluciones de los diferentes ejercicios.
 3. Modifica el fichero README.md, indicando tu nombre e indica la dirección del repositorio.
 
-~~~git
-solución
+~~~
+git clone https://github.com/mcuevaseljust/EjerciciosGit.git
+
 ~~~

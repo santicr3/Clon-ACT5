@@ -6,7 +6,9 @@ Para hacer estos ejercicios es necesario haber hecho antes los ejercicios sobre 
 
 Crear una nueva rama **bibliografia** y mostrar las ramas del repositorio.
 
-~~~git
+~~~
+git branch bibliografia
+git branch -av
 ~~~
 
 ## Ejercicio 2
@@ -19,7 +21,11 @@ Crear una nueva rama **bibliografia** y mostrar las ramas del repositorio.
 3. Hacer un commit con el mensaje “Añadido capítulo 4.”
 4. Mostrar la historia del repositorio incluyendo todas las ramas.
 
-~~~git
+~~~
+nano capitulos/capitulo4.txt
+git add capitulos/capitulo4.txt
+git commit -m "Añadido capítulo 4."
+git log --graph --all --oneline
 ~~~
 
 ## Ejercicio 3
@@ -33,7 +39,12 @@ Crear una nueva rama **bibliografia** y mostrar las ramas del repositorio.
 4. Hacer un commit con el mensaje “Añadida primera referencia bibliográfica.”
 5. Mostrar la historia del repositorio incluyendo todas las ramas.
 
-~~~git
+~~~
+git checkout bibliografia
+nano bibliogrfia.txt
+git add .
+git commit -m "Añadida primera referencia bibliográfica."
+git log --graph --all --oneline
 ~~~
 
 ## Ejercicio 4
@@ -43,12 +54,18 @@ Crear una nueva rama **bibliografia** y mostrar las ramas del repositorio.
 3. Eliminar la rama **bibliografia**.
 4. Mostrar de nuevo la historia del repositorio incluyendo todas las ramas.
 
-~~~git
+~~~
+git checkout master
+git merge bibliografia
+git log --graph --all --oneline
+git branch -d bibliografia
+git log --graph --all --oneline
 ~~~
 
 ## Ejercicio 5
 
 1. Crear la rama **bibliografia**.
+git branch bibliogragia
 2. Cambiar a la rama **bibliografia**.
 3. Cambiar el fichero **bibliografia.txt** para que contenga las siguientes referencias:
 
@@ -72,5 +89,19 @@ Crear una nueva rama **bibliografia** y mostrar las ramas del repositorio.
 10.  Añadir los cambios a la zona de intercambio temporal y hacer un commit con el mensaje “Resuelto conflicto de bibliografía.”
 11.  Mostrar la historia del repositorio incluyendo todas las ramas.
 
-~~~git
+~~~
+git branch bibliogragia
+git checkout bibliografia
+nano bibliografia.txt
+git add .
+git commit -m "Añadida nueva referencia bibliográfica."
+git checkout master
+nano bibliografía.txt
+git add .
+git commit -m "Añadida nueva referencia bibliográfica."
+git merge bibliografia
+nano bibliogra.txt
+git add .
+git commit -m "Resuelto conflicto de bibliográfia."
+git log --graph --all --oneline
 ~~~

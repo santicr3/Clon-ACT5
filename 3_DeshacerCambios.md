@@ -9,8 +9,11 @@ Para hacer estos ejercicios es necesario haber hecho antes los ejercicios sobre 
 3. Deshacer los cambios realizados en el fichero **indice.txt** para volver a la versión anterior del fichero.
 4. Volver a comprobar el estado del repositorio.
 
-~~~git
-solución
+~~~
+nano indice.txt
+git status
+git checkout HEAD -- indice.txt
+git status
 ~~~
 
 ## Ejercicio 2
@@ -23,8 +26,14 @@ solución
 6. Deshacer los cambios realizados en el fichero **indice.txt** para volver a la versión anterior del fichero.
 7. Volver a comprobar el estado del repositorio.
 
-~~~git
-solución
+~~~
+nano indice.txt
+git add .
+git status
+git reset
+git status
+git checkout HEAD -- indice.txt
+git status
 ~~~
 
 ## Ejercicio 3
@@ -39,8 +48,15 @@ solución
 8. Deshacer los cambios realizados para volver a la versión del repositorio.
 9. Volver a comprobar el estado del repositorio.
 
-~~~git
-solución
+~~~
+nano indice.txt
+rm capitulos/capitulo3.txt
+touch capitulos/capitulo4.txt
+git add .
+git status
+git reset
+git status
+git checkout HEAD -- .
 ~~~
 
 ## Ejercicio 4
@@ -55,6 +71,18 @@ solución
 8. Deshacer el último commit y los cambios anteriores del directorio de trabajo volviendo a la versión anterior del repositorio.
 9. Comprobar de nuevo el historial y el estado del repositorio.
 
-~~~git
-solución
+~~~
+nano indice.txt
+rm capitulos/capitulo3.txt
+git add .
+git log
+git commit -m "Borrado accidental"
+git reset HEAD~1
+git log
+git status
+git add .
+git commit -m "Borrado accidental"
+git reset --hard HEAD~1
+git log
+git status
 ~~~
