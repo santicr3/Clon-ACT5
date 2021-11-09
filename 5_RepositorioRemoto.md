@@ -68,6 +68,8 @@ git push
 3. Modifica el fichero README.md, indicando tu nombre e indica la dirección del repositorio.
 
 ~~~
-git clone https://github.com/mcuevaseljust/EjerciciosGit.git
+git add .
+git commit -m "Ejercicios hechos"
+git clone https://github.com/santicr3/Clon-ACT5
 
 ~~~
